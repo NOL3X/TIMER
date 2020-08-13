@@ -1,0 +1,16 @@
+function timer(){
+var date=new Date("2021/1/1");
+var today=new Date();
+var difference=date-today;
+
+var seconds=difference/1000%60;
+var minutes=difference/1000/60%60;
+var hours=difference/1000/60/60%24;
+var days=difference/1000/60/60/24;
+ 
+document.getElementById("timer").innerHTML="To the New Year is left: "+Math.floor(days)+" days, "+Math.floor(hours)+" hours, "+Math.floor(minutes)+" minutes, "+Math.floor(seconds)+" seconds";
+}
+window.onload=function load(){
+  setInterval(timer,1000);
+  showImage();
+}
